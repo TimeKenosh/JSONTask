@@ -6,49 +6,49 @@ namespace Task1
     {
 
         [JsonProperty("edition")]
-        private string Edition;
+        private string edition;
 
         [JsonProperty("language")]
-        private string Language;
+        private string language;
 
         [JsonProperty("price")]
-        private string Price;
+        private string price;
 
         public string GetEdition()
         {
-            return Edition;
+            return edition;
         }
 
         public string SetEdition(string Edition)
         {
-            return this.Edition = Edition;
+            return edition = Edition;
         }
 
         public string GetLanguage()
         {
-            return Language;
+            return language;
         }
 
         public string SetLanguage(string Language)
         {
-            return this.Language = Language;
+            return language = Language;
         }
 
         public string GetPrice()
         {
-            return Price;
+            return price;
         }
 
         public string SetPrice(string Price)
         {
-            return this.Price = Price;
+            return price = Price;
         }
 
         public EBooks(string Edition, string Language, string Price)
         {
-            this.Edition = Edition;
-            this.Language = Language;
-            this.Price = Price;
+            edition = Edition;
+            language = Language;
+            price = Price;
         }
 
         public override bool Equals(object obj)
@@ -58,14 +58,8 @@ namespace Task1
             {
                 return false;
             }
-            return Edition == compared.Edition && Language == compared.Language && Price == compared.Price;
+            return edition == compared.edition && language == compared.language && price == compared.price;
         }
-
-        public override int GetHashCode()
-        {
-            return Language.GetHashCode();
-        }
-
     }
 }
 
