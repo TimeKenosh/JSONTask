@@ -12,7 +12,7 @@ namespace Task1
         private string storeName;
 
         [JsonProperty("eBooks")]
-        private List<EBooks> eBooks;
+        private List<EBookDTO> eBooks;
 
         public int GetStoreId()
         {
@@ -34,12 +34,12 @@ namespace Task1
             storeName = StoreName;
         }
 
-        public List<EBooks> GetEBooks()
+        public List<EBookDTO> GetEBooks()
         {
             return eBooks;
         }
 
-        public void SetEBooks(List<EBooks> EBooks)
+        public void SetEBooks(List<EBookDTO> EBooks)
         {
             eBooks = EBooks;
         }
